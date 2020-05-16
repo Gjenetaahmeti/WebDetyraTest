@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TestOnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Pyetja">
+          <Key>
+            <PropertyRef Name="PyetjaID" />
+          </Key>
+          <Property Name="PyetjaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pyejta" Type="text" Nullable="false" />
+          <Property Name="Opcioni1" Type="text" />
+          <Property Name="Opcioni2" Type="text" />
+          <Property Name="Opcioni3" Type="text" />
+          <Property Name="Opcioni4" Type="text" />
+          <Property Name="PergjigjjaESakte" Type="text" />
+        </EntityType>
+        <EntityType Name="Useri">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmriUserit" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EmailUserit" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PasswordUserit" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Emri" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mbiemri" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="TestOnlineModelStoreContainer">
+          <EntitySet Name="Pyetja" EntityType="Self.Pyetja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Useri" EntityType="Self.Useri" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestOnlineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Pyetja">
+          <Key>
+            <PropertyRef Name="PyetjaID" />
+          </Key>
+          <Property Name="PyetjaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pyejta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Opcioni1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Opcioni2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Opcioni3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Opcioni4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PergjigjjaESakte" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Useri">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmriUserit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmailUserit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PasswordUserit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Emri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mbiemri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pyetjas" EntityType="Self.Pyetja" />
+          <EntitySet Name="Useris" EntityType="Self.Useri" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestOnlineModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Pyetjas">
+            <EntityTypeMapping TypeName="TestOnlineModel.Pyetja">
+              <MappingFragment StoreEntitySet="Pyetja">
+                <ScalarProperty Name="PyetjaID" ColumnName="PyetjaID" />
+                <ScalarProperty Name="Pyejta" ColumnName="Pyejta" />
+                <ScalarProperty Name="Opcioni1" ColumnName="Opcioni1" />
+                <ScalarProperty Name="Opcioni2" ColumnName="Opcioni2" />
+                <ScalarProperty Name="Opcioni3" ColumnName="Opcioni3" />
+                <ScalarProperty Name="Opcioni4" ColumnName="Opcioni4" />
+                <ScalarProperty Name="PergjigjjaESakte" ColumnName="PergjigjjaESakte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Useris">
+            <EntityTypeMapping TypeName="TestOnlineModel.Useri">
+              <MappingFragment StoreEntitySet="Useri">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="EmriUserit" ColumnName="EmriUserit" />
+                <ScalarProperty Name="EmailUserit" ColumnName="EmailUserit" />
+                <ScalarProperty Name="PasswordUserit" ColumnName="PasswordUserit" />
+                <ScalarProperty Name="Emri" ColumnName="Emri" />
+                <ScalarProperty Name="Mbiemri" ColumnName="Mbiemri" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

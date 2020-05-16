@@ -1,0 +1,66 @@
+﻿@model WebDetyra.Models.Pyetja
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pyetja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pyejta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pyejta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Opcioni1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Opcioni1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Opcioni2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Opcioni2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Opcioni3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Opcioni3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Opcioni4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Opcioni4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PergjigjjaESakte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PergjigjjaESakte)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PyetjaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

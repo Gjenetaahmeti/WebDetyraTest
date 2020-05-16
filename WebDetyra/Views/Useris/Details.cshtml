@@ -1,0 +1,66 @@
+﻿@model WebDetyra.Models.Useri
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Useri</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmriUserit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmriUserit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailUserit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailUserit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PasswordUserit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PasswordUserit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mbiemri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mbiemri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

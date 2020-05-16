@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebDetyra.Models.Pyetja>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pyejta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opcioni1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opcioni2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opcioni3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opcioni4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PergjigjjaESakte)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pyejta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opcioni1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opcioni2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opcioni3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opcioni4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PergjigjjaESakte)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PyetjaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PyetjaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PyetjaID })
+        </td>
+    </tr>
+}
+
+</table>
