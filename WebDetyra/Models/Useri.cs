@@ -11,15 +11,24 @@ namespace WebDetyra.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Useri
     {
         public int UserID { get; set; }
         public string EmriUserit { get; set; }
+        [DisplayName("Email I Perdoruesit")]
+        [Required(ErrorMessage ="Kjo fushe duhet plotesuar.")]
         public string EmailUserit { get; set; }
+        [DisplayName("Passwordi I Perdoruesit")]
+        [Required(ErrorMessage = "Kjo fushe duhet plotesuar.")]
+        [DataType(DataType.Password)]
         public string PasswordUserit { get; set; }
         public string Emri { get; set; }
         public string Mbiemri { get; set; }
         public string Email { get; set; }
+
+        public string LoginErrorMessage { get; set; }
     }
 }
